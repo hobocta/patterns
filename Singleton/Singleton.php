@@ -1,7 +1,7 @@
 <?php
-namespace Hbc\Patterns;
+namespace Hbc\Patterns\Singleton;
 
-class Singleton
+class Singleton implements SingletonInterface
 {
 	private static $instance;
 
