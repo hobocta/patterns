@@ -1,5 +1,5 @@
 <?php
-namespace Hbc\Patterns\AbstractFactory;
+namespace Hobocta\Patterns\AbstractFactory;
 
 abstract class AbstractRealProduct extends AbstractProduct
 {

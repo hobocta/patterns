@@ -1,5 +1,5 @@
 <?php
-namespace Hbc\Patterns\Singleton;
+namespace Hobocta\Patterns\Singleton;
 
 class Singleton implements SingletonInterface
 {

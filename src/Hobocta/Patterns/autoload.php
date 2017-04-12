@@ -1,7 +1,7 @@
 <?php
 spl_autoload_register(
 	function ($class) {
-		$prefix = 'Hbc\\Patterns\\';
+		$prefix = 'Hobocta\\Patterns\\';
 
 		$baseDir = sprintf('%s/', __DIR__);
 
