@@ -3,17 +3,17 @@ namespace Hobocta\Patterns\AbstractFactory;
 
 abstract class AbstractVirtualProduct extends AbstractProduct
 {
-	protected $fileSize = 0;
+    protected $fileSize = 0;
 
-	public function __construct($name, $fileSize)
-	{
-		parent::__construct($name);
+    public function __construct($name, $fileSize)
+    {
+        parent::__construct($name);
 
-		$this->fileSize = $fileSize;
-	}
+        $this->fileSize = $fileSize;
+    }
 
-	public function getFileSize()
-	{
-		return $this->fileSize;
-	}
+    public function getFileSize()
+    {
+        return $this->fileSize;
+    }
 }
