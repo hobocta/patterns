@@ -48,3 +48,14 @@ echo '</pre>';*/
 $devManager->takeInterview();
 $marketingManager = new \Hobocta\Patterns\FactoryMethod\MarketingManager();
 $marketingManager->takeInterview();*/
+
+// Прототип
+/*$original = new \Hobocta\Patterns\Prototype\Sheep('Jolly');
+echo '<pre>';
+var_export($original);
+echo '</pre>';
+$cloned = clone $original;
+$cloned->setName('Dolly');
+echo '<pre>';
+var_export($cloned);
+echo '</pre>';*/
