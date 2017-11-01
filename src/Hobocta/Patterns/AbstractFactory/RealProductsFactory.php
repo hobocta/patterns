@@ -1,4 +1,5 @@
 <?php
+
 namespace Hobocta\Patterns\AbstractFactory;
 
 class RealProductsFactory extends AbstractFactory
