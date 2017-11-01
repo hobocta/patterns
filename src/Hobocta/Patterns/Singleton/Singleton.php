@@ -16,7 +16,7 @@ class Singleton implements SingletonInterface
     /**
      * @return Singleton
      */
-    public static function getInstance()
+    public static function getInstance(): self
     {
         if (self::$instance === null) {
             self::$instance = new self;

@@ -43,9 +43,9 @@ class BurgerBuilder
     }
 
     /**
-     * @return $this
+     * @return BurgerBuilder
      */
-    public function addCheese()
+    public function addCheese(): self
     {
         $this->cheese = true;
 
@@ -53,9 +53,9 @@ class BurgerBuilder
     }
 
     /**
-     * @return $this
+     * @return BurgerBuilder
      */
-    public function addPepperoni()
+    public function addPepperoni(): self
     {
         $this->pepperoni = true;
 
@@ -63,9 +63,9 @@ class BurgerBuilder
     }
 
     /**
-     * @return $this
+     * @return BurgerBuilder
      */
-    public function addLettuce()
+    public function addLettuce(): self
     {
         $this->lettuce = true;
 
@@ -73,9 +73,9 @@ class BurgerBuilder
     }
 
     /**
-     * @return $this
+     * @return BurgerBuilder
      */
-    public function addTomato()
+    public function addTomato(): self
     {
         $this->tomato = true;
 
@@ -85,7 +85,7 @@ class BurgerBuilder
     /**
      * @return Burger
      */
-    public function build()
+    public function build(): Burger
     {
         return new Burger($this);
     }

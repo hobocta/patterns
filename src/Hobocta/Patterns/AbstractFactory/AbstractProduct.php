@@ -15,9 +15,9 @@ abstract class AbstractProduct implements ProductInterface
 
     /**
      * AbstractProduct constructor.
-     * @param $name
+     * @param string $name
      */
-    public function __construct($name)
+    public function __construct(string $name)
     {
         $this->name = $name;
     }
@@ -25,7 +25,7 @@ abstract class AbstractProduct implements ProductInterface
     /**
      * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }

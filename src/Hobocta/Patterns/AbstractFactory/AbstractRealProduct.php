@@ -15,10 +15,10 @@ abstract class AbstractRealProduct extends AbstractProduct
 
     /**
      * AbstractRealProduct constructor.
-     * @param $name
-     * @param $weight
+     * @param string $name
+     * @param float $weight
      */
-    public function __construct($name, $weight)
+    public function __construct(string $name, int $weight)
     {
         parent::__construct($name);
 
@@ -28,7 +28,7 @@ abstract class AbstractRealProduct extends AbstractProduct
     /**
      * @return int
      */
-    public function getWeight()
+    public function getWeight(): int
     {
         return $this->weight;
     }

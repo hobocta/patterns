@@ -9,9 +9,9 @@ namespace Hobocta\Patterns\Decorator;
 class Coffee implements CoffeeInterface
 {
     /**
-     * @return int
+     * @return float
      */
-    public function getCost()
+    public function getCost(): float
     {
         return 50;
     }

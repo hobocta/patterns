@@ -9,12 +9,12 @@ namespace Hobocta\Patterns\AbstractFactory;
 abstract class AbstractFactory
 {
     /**
-     * @return mixed
+     * @return ProductInterface
      */
-    abstract function createBook();
+    abstract function createBook(): ProductInterface;
 
     /**
-     * @return mixed
+     * @return ProductInterface
      */
-    abstract function createMagazine();
+    abstract function createMagazine(): ProductInterface;
 }

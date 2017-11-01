@@ -15,10 +15,10 @@ abstract class AbstractVirtualProduct extends AbstractProduct
 
     /**
      * AbstractVirtualProduct constructor.
-     * @param $name
-     * @param $fileSize
+     * @param string $name
+     * @param int $fileSize
      */
-    public function __construct($name, $fileSize)
+    public function __construct(string $name, int $fileSize)
     {
         parent::__construct($name);
 
@@ -28,7 +28,7 @@ abstract class AbstractVirtualProduct extends AbstractProduct
     /**
      * @return int
      */
-    public function getFileSize()
+    public function getFileSize(): int
     {
         return $this->fileSize;
     }

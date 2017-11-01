@@ -9,7 +9,7 @@ namespace Hobocta\Patterns\AbstractFactory;
 interface ProductInterface
 {
     /**
-     * @return mixed
+     * @return string
      */
-    public function getName();
+    public function getName(): string;
 }

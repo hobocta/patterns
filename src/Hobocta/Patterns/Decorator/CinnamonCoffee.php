@@ -23,9 +23,9 @@ class CinnamonCoffee implements CoffeeInterface
     }
 
     /**
-     * @return mixed
+     * @return float
      */
-    public function getCost()
+    public function getCost(): float
     {
         return $this->coffee->getCost() + 5;
     }

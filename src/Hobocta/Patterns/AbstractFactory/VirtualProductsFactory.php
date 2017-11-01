@@ -9,17 +9,17 @@ namespace Hobocta\Patterns\AbstractFactory;
 class VirtualProductsFactory extends AbstractFactory
 {
     /**
-     * @return VirtualProductBook
+     * @return ProductInterface
      */
-    function createBook()
+    function createBook(): ProductInterface
     {
         return new VirtualProductBook('Virtual book', 300);
     }
 
     /**
-     * @return VirtualProductBook
+     * @return ProductInterface
      */
-    function createMagazine()
+    function createMagazine(): ProductInterface
     {
         return new VirtualProductBook('Virtual magazine', 400);
     }

@@ -9,7 +9,7 @@ namespace Hobocta\Patterns\Decorator;
 interface CoffeeInterface
 {
     /**
-     * @return mixed
+     * @return float
      */
-    public function getCost();
+    public function getCost(): float;
 }

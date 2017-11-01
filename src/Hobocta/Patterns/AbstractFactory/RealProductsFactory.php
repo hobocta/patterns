@@ -9,17 +9,17 @@ namespace Hobocta\Patterns\AbstractFactory;
 class RealProductsFactory extends AbstractFactory
 {
     /**
-     * @return RealProductBook
+     * @return ProductInterface
      */
-    function createBook()
+    function createBook(): ProductInterface
     {
         return new RealProductBook('Real book', 100);
     }
 
     /**
-     * @return RealProductMagazine
+     * @return ProductInterface
      */
-    function createMagazine()
+    function createMagazine(): ProductInterface
     {
         return new RealProductMagazine('Real magazine', 200);
     }

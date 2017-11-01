@@ -11,6 +11,10 @@ echo '</pre>';*/
 /*$realProductsFactory = new \Hobocta\Patterns\AbstractFactory\RealProductsFactory();
 echo '<pre>';
 var_export($realProductsFactory->createBook()->getName());
+echo '</pre>';
+$virtualProductsFactory = new \Hobocta\Patterns\AbstractFactory\VirtualProductsFactory();
+echo '<pre>';
+var_export($virtualProductsFactory->createBook()->getName());
 echo '</pre>';*/
 
 // Декоратор
@@ -28,8 +32,7 @@ var_export($chocolateCoffee->getCost());
 echo '</pre>';*/
 
 // Строитель
-/*$burgerBuilder = new \Hobocta\Patterns\Builder\BurgerBuilder(12);
-$burger = $burgerBuilder->addCheese()->addLettuce()->build();
+/*$burger = (new \Hobocta\Patterns\Builder\BurgerBuilder(12))->addCheese()->addLettuce()->build();
 echo '<pre>';
 var_export($burger);
 echo '</pre>';*/
