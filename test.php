@@ -42,3 +42,9 @@ echo '</pre>';*/
 echo '<pre>';
 var_export($simpleFactory);
 echo '</pre>';*/
+
+// Фабричный метод
+/*$devManager = new \Hobocta\Patterns\FactoryMethod\DevelopmentManager();
+$devManager->takeInterview();
+$marketingManager = new \Hobocta\Patterns\FactoryMethod\MarketingManager();
+$marketingManager->takeInterview();*/
