@@ -1,10 +1,21 @@
 <?php
+
 namespace Hobocta\Patterns\Singleton;
 
+/**
+ * Class Singleton
+ * @package Hobocta\Patterns\Singleton
+ */
 class Singleton implements SingletonInterface
 {
+    /**
+     * @var
+     */
     private static $instance;
 
+    /**
+     * @return Singleton
+     */
     public static function getInstance()
     {
         if (self::$instance === null) {
@@ -14,6 +25,9 @@ class Singleton implements SingletonInterface
         return self::$instance;
     }
 
+    /**
+     * Singleton constructor.
+     */
     private function __construct()
     {
     }
