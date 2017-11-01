@@ -36,3 +36,9 @@ echo '</pre>';*/
 echo '<pre>';
 var_export($burger);
 echo '</pre>';*/
+
+// Простая фабирка
+/*$simpleFactory = \Hobocta\Patterns\SimpleFactory\DoorFactory::makeDoor(150, 200);
+echo '<pre>';
+var_export($simpleFactory);
+echo '</pre>';*/
