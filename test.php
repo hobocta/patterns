@@ -101,8 +101,10 @@ echo '</pre>';*/
 /*$computer = new \Hobocta\Patterns\Structural\Facade\ComputerFacade(
     new \Hobocta\Patterns\Structural\Facade\Computer()
 );
+echo '<pre>';
 $computer->turnOn();
-$computer->turnOff();*/
+$computer->turnOff();
+echo '</pre>';*/
 
 // Приспособленец
 /*$teaMaker = new \Hobocta\Patterns\Structural\Flyweight\TeaMaker();
@@ -110,12 +112,30 @@ $shop = new \Hobocta\Patterns\Structural\Flyweight\TeaShop($teaMaker);
 $shop->takeOrder('less sugar', 1);
 $shop->takeOrder('more milk', 2);
 $shop->takeOrder('less sugar', 3);
-$shop->serve();*/
+echo '<pre>';
+$shop->serve();
+echo '</pre>';*/
 
 // Заместитель
 /*$door = new \Hobocta\Patterns\Structural\Proxy\Security(
     new \Hobocta\Patterns\Structural\Proxy\LabDoor()
 );
+echo '<pre>';
 $door->open('invalid');
 $door->open('secret');
-$door->close();*/
+$door->close();
+echo '</pre>';*/
+
+// Цепочка ответственности
+/*$bitcoin = new \Hobocta\Patterns\Behavioral\ChainOfResponsibility\Bitcoin(300);
+$payPal = new \Hobocta\Patterns\Behavioral\ChainOfResponsibility\PayPal(200);
+$payPal->setNext($bitcoin);
+$bank = new \Hobocta\Patterns\Behavioral\ChainOfResponsibility\Bank(100);
+$bank->setNext($payPal);
+echo '<pre>';
+try {
+    $bank->pay(2591);
+} catch (Exception $e) {
+    echo $e->getMessage();
+}
+echo '</pre>';*/

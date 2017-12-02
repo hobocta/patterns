@@ -39,7 +39,7 @@ class TeaShop
     public function serve()
     {
         foreach ($this->orders as $table => $tea) {
-            echo sprintf('Serving tea to table #%s', $table);
+            echo sprintf('Serving tea to table #%s' . PHP_EOL, $table);
         }
     }
 }

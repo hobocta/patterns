@@ -30,7 +30,7 @@ class Security
         if ($this->authenticate($password)) {
             $this->door->open();
         } else {
-            echo 'Incorrect password';
+            echo 'Incorrect password' . PHP_EOL;
         }
     }
 

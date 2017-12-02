@@ -10,36 +10,36 @@ class Computer
 {
     public function getElectricShock()
     {
-        echo 'Ouch!';
+        echo 'Ouch!' . PHP_EOL;
     }
 
     public function makeSound()
     {
-        echo 'Beep beep!';
+        echo 'Beep beep!' . PHP_EOL;
     }
 
     public function showLoadingScreen()
     {
-        echo 'Loading...';
+        echo 'Loading...' . PHP_EOL;
     }
 
     public function bam()
     {
-        echo 'Ready to be used!';
+        echo 'Ready to be used!' . PHP_EOL;
     }
 
     public function closeEverything()
     {
-        echo 'Bup bup bup buzz!';
+        echo 'Bup bup bup buzz!' . PHP_EOL;
     }
 
     public function sooth()
     {
-        echo 'Zzz';
+        echo 'Zzz' . PHP_EOL;
     }
 
     public function pullCurrent()
     {
-        echo 'Hah!';
+        echo 'Hah!' . PHP_EOL;
     }
 }

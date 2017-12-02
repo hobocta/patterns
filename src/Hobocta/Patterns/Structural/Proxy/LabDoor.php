@@ -10,11 +10,11 @@ class LabDoor implements Door
 {
     public function open()
     {
-        echo 'Opening lab door';
+        echo 'Opening lab door' . PHP_EOL;
     }
 
     public function close()
     {
-        echo 'Closing the lab door';
+        echo 'Closing the lab door' . PHP_EOL;
     }
 }
