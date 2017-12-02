@@ -77,7 +77,7 @@ var_export($hunter->hunt($wildDogAdapter));
 echo '</pre>';*/
 
 // Мост
-$darkTheme = new \Hobocta\Patterns\Structural\Bridge\DarkTheme();
+/*$darkTheme = new \Hobocta\Patterns\Structural\Bridge\DarkTheme();
 $about = new \Hobocta\Patterns\Structural\Bridge\About($darkTheme);
 echo '<pre>';
 var_export($about->getContent());
@@ -85,4 +85,14 @@ echo '</pre>';
 $careers = new \Hobocta\Patterns\Structural\Bridge\Careers($darkTheme);
 echo '<pre>';
 var_export($careers->getContent());
-echo '</pre>';
+echo '</pre>';*/
+
+// Компоновщик
+/*$petya = new \Hobocta\Patterns\Structural\Composite\Developer('Petya', 2000);
+$oleg = new \Hobocta\Patterns\Structural\Composite\Designer('Oleg', 3000);
+$organization = new \Hobocta\Patterns\Structural\Composite\Organization;
+$organization->addEmployee($petya);
+$organization->addEmployee($oleg);
+echo '<pre>';
+var_export($organization->getNetSalaries());
+echo '</pre>';*/
