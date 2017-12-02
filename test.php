@@ -103,3 +103,11 @@ echo '</pre>';*/
 );
 $computer->turnOn();
 $computer->turnOff();*/
+
+// Приспособленец
+/*$teaMaker = new \Hobocta\Patterns\Structural\Flyweight\TeaMaker();
+$shop = new \Hobocta\Patterns\Structural\Flyweight\TeaShop($teaMaker);
+$shop->takeOrder('less sugar', 1);
+$shop->takeOrder('more milk', 2);
+$shop->takeOrder('less sugar', 3);
+$shop->serve();*/
