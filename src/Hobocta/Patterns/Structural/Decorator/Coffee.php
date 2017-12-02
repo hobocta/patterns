@@ -1,10 +1,10 @@
 <?php
 
-namespace Hobocta\Patterns\Creational\Decorator;
+namespace Hobocta\Patterns\Structural\Decorator;
 
 /**
  * Class Coffee
- * @package Hobocta\Patterns\Creational\Decorator
+ * @package Hobocta\Patterns\Structural\Decorator
  */
 class Coffee implements CoffeeInterface
 {

@@ -17,20 +17,6 @@ echo '<pre>';
 var_export($virtualProductsFactory->createBook()->getName());
 echo '</pre>';*/
 
-// Декоратор
-/*$coffee = new \Hobocta\Patterns\Creational\Decorator\Coffee();
-echo '<pre>';
-var_export($coffee->getCost());
-echo '</pre>';
-$milkCoffee = new \Hobocta\Patterns\Creational\Decorator\MilkCoffee($coffee);
-echo '<pre>';
-var_export($milkCoffee->getCost());
-echo '</pre>';
-$chocolateCoffee = new \Hobocta\Patterns\Creational\Decorator\ChocolateCoffee($milkCoffee);
-echo '<pre>';
-var_export($chocolateCoffee->getCost());
-echo '</pre>';*/
-
 // Строитель
 /*$burger = (new \Hobocta\Patterns\Creational\Builder\BurgerBuilder(12))->addCheese()->addLettuce()->build();
 echo '<pre>';
@@ -96,3 +82,17 @@ $organization->addEmployee($oleg);
 echo '<pre>';
 var_export($organization->getNetSalaries());
 echo '</pre>';*/
+
+// Декоратор
+$coffee = new \Hobocta\Patterns\Structural\Decorator\Coffee();
+echo '<pre>';
+var_export($coffee->getCost());
+echo '</pre>';
+$milkCoffee = new \Hobocta\Patterns\Structural\Decorator\MilkCoffee($coffee);
+echo '<pre>';
+var_export($milkCoffee->getCost());
+echo '</pre>';
+$chocolateCoffee = new \Hobocta\Patterns\Structural\Decorator\ChocolateCoffee($milkCoffee);
+echo '<pre>';
+var_export($chocolateCoffee->getCost());
+echo '</pre>';

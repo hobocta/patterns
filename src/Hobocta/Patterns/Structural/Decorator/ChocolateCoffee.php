@@ -1,12 +1,12 @@
 <?php
 
-namespace Hobocta\Patterns\Creational\Decorator;
+namespace Hobocta\Patterns\Structural\Decorator;
 
 /**
- * Class CinnamonCoffee
- * @package Hobocta\Patterns\Creational\Decorator
+ * Class ChocolateCoffee
+ * @package Hobocta\Patterns\Structural\Decorator
  */
-class CinnamonCoffee implements CoffeeInterface
+class ChocolateCoffee implements CoffeeInterface
 {
     /**
      * @var CoffeeInterface
@@ -14,7 +14,7 @@ class CinnamonCoffee implements CoffeeInterface
     var $coffee;
 
     /**
-     * CinnamonCoffee constructor.
+     * ChocolateCoffee constructor.
      * @param CoffeeInterface $coffee
      */
     public function __construct(CoffeeInterface $coffee)
@@ -27,6 +27,6 @@ class CinnamonCoffee implements CoffeeInterface
      */
     public function getCost(): float
     {
-        return $this->coffee->getCost() + 5;
+        return $this->coffee->getCost() + 15;
     }
 }
