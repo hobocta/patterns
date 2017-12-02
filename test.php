@@ -84,7 +84,7 @@ var_export($organization->getNetSalaries());
 echo '</pre>';*/
 
 // Декоратор
-$coffee = new \Hobocta\Patterns\Structural\Decorator\Coffee();
+/*$coffee = new \Hobocta\Patterns\Structural\Decorator\Coffee();
 echo '<pre>';
 var_export($coffee->getCost());
 echo '</pre>';
@@ -95,4 +95,11 @@ echo '</pre>';
 $chocolateCoffee = new \Hobocta\Patterns\Structural\Decorator\ChocolateCoffee($milkCoffee);
 echo '<pre>';
 var_export($chocolateCoffee->getCost());
-echo '</pre>';
+echo '</pre>';*/
+
+// Фасад
+/*$computer = new \Hobocta\Patterns\Structural\Facade\ComputerFacade(
+    new \Hobocta\Patterns\Structural\Facade\Computer()
+);
+$computer->turnOn();
+$computer->turnOff();*/
