@@ -111,3 +111,11 @@ $shop->takeOrder('less sugar', 1);
 $shop->takeOrder('more milk', 2);
 $shop->takeOrder('less sugar', 3);
 $shop->serve();*/
+
+// Заместитель
+/*$door = new \Hobocta\Patterns\Structural\Proxy\Security(
+    new \Hobocta\Patterns\Structural\Proxy\LabDoor()
+);
+$door->open('invalid');
+$door->open('secret');
+$door->close();*/
