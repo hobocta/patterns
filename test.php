@@ -75,3 +75,14 @@ $wildDogAdapter = new Hobocta\Patterns\Structural\Adapter\WildDogAdapter($wildDo
 echo '<pre>';
 var_export($hunter->hunt($wildDogAdapter));
 echo '</pre>';*/
+
+// Мост
+$darkTheme = new \Hobocta\Patterns\Structural\Bridge\DarkTheme();
+$about = new \Hobocta\Patterns\Structural\Bridge\About($darkTheme);
+echo '<pre>';
+var_export($about->getContent());
+echo '</pre>';
+$careers = new \Hobocta\Patterns\Structural\Bridge\Careers($darkTheme);
+echo '<pre>';
+var_export($careers->getContent());
+echo '</pre>';
