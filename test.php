@@ -59,3 +59,19 @@ $cloned->setName('Dolly');
 echo '<pre>';
 var_export($cloned);
 echo '</pre>';*/
+
+// Адаптер
+/*$hunter = new \Hobocta\Patterns\Structural\Adapter\Hunter();
+$africanLion = new \Hobocta\Patterns\Structural\Adapter\AfricanLion();
+echo '<pre>';
+var_export($hunter->hunt($africanLion));
+echo '</pre>';
+$asianLion = new \Hobocta\Patterns\Structural\Adapter\AsianLion();
+echo '<pre>';
+var_export($hunter->hunt($africanLion));
+echo '</pre>';
+$wildDog = new \Hobocta\Patterns\Structural\Adapter\WildDog();
+$wildDogAdapter = new Hobocta\Patterns\Structural\Adapter\WildDogAdapter($wildDog);
+echo '<pre>';
+var_export($hunter->hunt($wildDogAdapter));
+echo '</pre>';*/
