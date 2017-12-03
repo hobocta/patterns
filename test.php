@@ -139,3 +139,13 @@ try {
     echo $e->getMessage();
 }
 echo '</pre>';*/
+
+// Команда
+/*$bulb = new \Hobocta\Patterns\Behavioral\Command\Bulb();
+$turnOn = new \Hobocta\Patterns\Behavioral\Command\TurnOn($bulb);
+$turnOff = new \Hobocta\Patterns\Behavioral\Command\TurnOff($bulb);
+$remoteControl = new \Hobocta\Patterns\Behavioral\Command\RemoteControl();
+echo '<pre>';
+$remoteControl->submit($turnOn);
+$remoteControl->submit($turnOff);
+echo '</pre>';*/
