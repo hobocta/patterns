@@ -6,7 +6,7 @@ namespace Hobocta\Patterns\Behavioral\Iterator;
  * Class StationList
  * @package Hobocta\Patterns\Behavioral\Iterator
  */
-class StationList implements \Iterator
+class StationList implements \Iterator, \Countable
 {
     /**
      * @var RadioStation[]
