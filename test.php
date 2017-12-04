@@ -149,3 +149,20 @@ echo '<pre>';
 $remoteControl->submit($turnOn);
 $remoteControl->submit($turnOff);
 echo '</pre>';*/
+
+// Итератор
+$stationsList = new \Hobocta\Patterns\Behavioral\Iterator\StationList();
+$stationsList->addStation(new \Hobocta\Patterns\Behavioral\Iterator\RadioStation(101.1));
+$stationsList->addStation(new \Hobocta\Patterns\Behavioral\Iterator\RadioStation(102.2));
+$stationsList->addStation(new \Hobocta\Patterns\Behavioral\Iterator\RadioStation(103.3));
+echo '<pre>';
+echo sprintf('count %s', $stationsList->count()) . PHP_EOL;
+foreach ($stationsList as $station) {
+    echo $station->getFrequency() . PHP_EOL;
+}
+$stationsList->removeStation(new \Hobocta\Patterns\Behavioral\Iterator\RadioStation(101.1));
+echo sprintf('count %s', $stationsList->count()) . PHP_EOL;
+foreach ($stationsList as $station) {
+    echo $station->getFrequency() . PHP_EOL;
+}
+echo '</pre>';
