@@ -175,3 +175,15 @@ echo '<pre>';
 $petya->send('Yo!');
 $oleg->send('Wow!');
 echo '</pre>';*/
+
+// Хранитель
+/*$editor = new \Hobocta\Patterns\Behavioral\Memento\Editor();
+$editor->type('Yo!');
+$editor->type('Wow!');
+$saved = $editor->save();
+$editor->type('Zzz...');
+echo '<pre>';
+echo $editor->getContent() . PHP_EOL;
+$editor->restore($saved);
+echo $editor->getContent() . PHP_EOL;
+echo '</pre>';*/
