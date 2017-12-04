@@ -151,7 +151,7 @@ $remoteControl->submit($turnOff);
 echo '</pre>';*/
 
 // Итератор
-$stationsList = new \Hobocta\Patterns\Behavioral\Iterator\StationList();
+/*$stationsList = new \Hobocta\Patterns\Behavioral\Iterator\StationList();
 $stationsList->addStation(new \Hobocta\Patterns\Behavioral\Iterator\RadioStation(101.1));
 $stationsList->addStation(new \Hobocta\Patterns\Behavioral\Iterator\RadioStation(102.2));
 $stationsList->addStation(new \Hobocta\Patterns\Behavioral\Iterator\RadioStation(103.3));
@@ -165,4 +165,13 @@ echo sprintf('count %s', $stationsList->count()) . PHP_EOL;
 foreach ($stationsList as $station) {
     echo $station->getFrequency() . PHP_EOL;
 }
-echo '</pre>';
+echo '</pre>';*/
+
+// Посредник
+/*$mediator = new \Hobocta\Patterns\Behavioral\Mediator\ChatRoom();
+$petya = new \Hobocta\Patterns\Behavioral\Mediator\User('Petya', $mediator);
+$oleg = new \Hobocta\Patterns\Behavioral\Mediator\User('Oleg', $mediator);
+echo '<pre>';
+$petya->send('Yo!');
+$oleg->send('Wow!');
+echo '</pre>';*/
