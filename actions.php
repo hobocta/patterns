@@ -199,6 +199,23 @@ foreach (
                 $jobPostings->addJob(new Behavioral\Observer\JobPost('Developer'));
                 $jobPostings->addJob(new Behavioral\Observer\JobPost('Manager'));
             },
+            'Посетитель' => function () {
+                $monkey = new Behavioral\Visitor\Monkey();
+                $lion = new Behavioral\Visitor\Lion();
+                $dolphin = new Behavioral\Visitor\Dolphin();
+
+                $speak = new Behavioral\Visitor\Speak();
+                $jump = new Behavioral\Visitor\Jump();
+
+                $monkey->accept($speak);
+                $monkey->accept($jump);
+
+                $lion->accept($speak);
+                $lion->accept($jump);
+
+                $dolphin->accept($speak);
+                $dolphin->accept($jump);
+            },
         ],
     ] as $type => $patterns
 ) {
