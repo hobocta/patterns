@@ -188,6 +188,17 @@ foreach (
                 $editor->restore($saved);
                 echo $editor->getContent() . PHP_EOL;
             },
+            'Наблюдатель' => function () {
+                $petya = new Behavioral\Observer\JobSeeker('Petya');
+                $oleg = new Behavioral\Observer\JobSeeker('Oleg');
+
+                $jobPostings = new Behavioral\Observer\JobPostings();
+                $jobPostings->attach($petya);
+                $jobPostings->attach($oleg);
+
+                $jobPostings->addJob(new Behavioral\Observer\JobPost('Developer'));
+                $jobPostings->addJob(new Behavioral\Observer\JobPost('Manager'));
+            },
         ],
     ] as $type => $patterns
 ) {
