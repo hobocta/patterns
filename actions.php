@@ -230,7 +230,7 @@ foreach (
 ) {
     $typeId = sprintf('collapse_%s', substr(md5($type), 0, 3));
     ?>
-    <div class="row" style="margin-top: 15px;">
+    <div class="row" style="margin-top: 15px; margin-bottom: 15px;">
         <div class="col-12">
             <button
                 class="btn btn-primary"
@@ -246,12 +246,28 @@ foreach (
     <div class="collapse" id="<?= $typeId ?>">
         <div class="row">
             <? foreach ($patterns as $name => $pattern): ?>
-                <div class="col-12 col-lg-6" style="margin-top: 15px;">
+                <div class="col-12 col-lg-6" style="margin-bottom: 15px;">
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">
                                 <?= $name ?>
                             </h4>
+                            <? $reflection = new ReflectionFunction($pattern) ?>
+                            <div class="alert alert-warning" role="alert">
+                                Код:
+                            </div>
+                            <pre class="card-text"><?
+                                $fileName = $reflection->getFileName();
+                                $startLine = $reflection->getStartLine();
+                                $endLine = $reflection->getEndLine() - 1;
+                                $length = $endLine - $startLine;
+                                $source = array_slice(file($fileName), $startLine, $length);
+                                $source = array_map('ltrim', $source);
+                                echo implode('', $source);
+                            ?></pre>
+                            <div class="alert alert-success" role="alert">
+                                Результат:
+                            </div>
                             <pre class="card-text"><? $pattern() ?></pre>
                         </div>
                     </div>
