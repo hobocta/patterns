@@ -246,7 +246,7 @@ foreach (
     <div class="collapse" id="<?= $typeId ?>">
         <div class="row">
             <? foreach ($patterns as $name => $pattern): ?>
-                <div class="col-12 col-lg-6" style="margin-bottom: 15px;">
+                <div class="col-12" style="margin-bottom: 15px;">
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">
