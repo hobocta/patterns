@@ -216,6 +216,15 @@ foreach (
                 $dolphin->accept($speak);
                 $dolphin->accept($jump);
             },
+            'Стратегия' => function () {
+                $dataSet = [1, 5, 4, 3, 2, 8];
+
+                $sorter = new Behavioral\Strategy\Sorter(new Behavioral\Strategy\BubbleSortStrategy());
+                $sorter->sort($dataSet);
+
+                $sorter = new Behavioral\Strategy\Sorter(new Behavioral\Strategy\QuickSortStrategy());
+                $sorter->sort($dataSet);
+            },
         ],
     ] as $type => $patterns
 ) {
