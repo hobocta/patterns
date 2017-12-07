@@ -262,7 +262,9 @@ foreach (
                                 $endLine = $reflection->getEndLine() - 1;
                                 $length = $endLine - $startLine;
                                 $source = array_slice(file($fileName), $startLine, $length);
-                                $source = array_map('ltrim', $source);
+                                $source = array_map(function ($item) {
+                                    return preg_replace('/^\s{16}/', '', $item);
+                                }, $source);
                                 echo implode('', $source);
                             ?></pre>
                             <div class="alert alert-success" role="alert">
