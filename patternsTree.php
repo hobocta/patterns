@@ -8,11 +8,6 @@ require_once 'src/autoload.php';
 
 return [
     'Порождающие' => [
-        'Синглтон' => function () {
-            $singleton = Creational\Singleton\Singleton::getInstance();
-
-            echo var_export($singleton, true) . PHP_EOL;
-        },
         'Абстрактная фабрика' => function () {
             $realProductsFactory = new Creational\AbstractFactory\RealProductsFactory();
 
@@ -51,6 +46,11 @@ return [
             $cloned->setName('Dolly');
 
             echo var_export($cloned, true) . PHP_EOL;
+        },
+        'Синглтон (одночка)' => function () {
+            $singleton = Creational\Singleton\Singleton::getInstance();
+
+            echo var_export($singleton, true) . PHP_EOL;
         },
     ],
     'Структурные ' => [
@@ -102,7 +102,7 @@ return [
             $computer->turnOn();
             $computer->turnOff();
         },
-        'Приспособленец' => function () {
+        'Приспособленец (легковес)' => function () {
             $teaMaker = new Structural\Flyweight\TeaMaker();
 
             $shop = new Structural\Flyweight\TeaShop($teaMaker);
@@ -119,7 +119,7 @@ return [
         },
     ],
     'Поведенческие' => [
-        'Цепочка ответственности' => function () {
+        'Цепочка ответственности (обязанностей)' => function () {
             $bitcoin = new Behavioral\ChainOfResponsibility\Bitcoin(300);
 
             $payPal = new Behavioral\ChainOfResponsibility\PayPal(200);
@@ -172,7 +172,7 @@ return [
             $petya->send('Yo!');
             $oleg->send('Wow!');
         },
-        'Хранитель' => function () {
+        'Хранитель (снимок)' => function () {
             $editor = new Behavioral\Memento\Editor();
 
             $editor->type('Yo!');
@@ -198,6 +198,36 @@ return [
             $jobPostings->addJob(new Behavioral\Observer\JobPost('Developer'));
             $jobPostings->addJob(new Behavioral\Observer\JobPost('Manager'));
         },
+        'Состояние' => function () {
+            $editor = new Behavioral\State\TextEditor(new Behavioral\State\DefaultCase());
+
+            $editor->type('Обычный текст');
+
+            $editor->setState(new Behavioral\State\UpperCase());
+
+            $editor->type('Капс');
+            $editor->type('Капс-капс');
+
+            $editor->setState(new Behavioral\State\LowerCase());
+
+            $editor->type('Строчный текст');
+        },
+        'Стратегия' => function () {
+            $dataSet = [1, 5, 4, 3, 2, 8];
+
+            $sorter = new Behavioral\Strategy\Sorter(new Behavioral\Strategy\BubbleSortStrategy());
+            $sorter->sort($dataSet);
+
+            $sorter = new Behavioral\Strategy\Sorter(new Behavioral\Strategy\QuickSortStrategy());
+            $sorter->sort($dataSet);
+        },
+        'Шаблонный метод' => function() {
+            $androidBuilder = new Behavioral\TemplateMethod\AndroidBuilder();
+            $androidBuilder->build();
+
+            $iosBuilder = new Behavioral\TemplateMethod\IosBuilder();
+            $iosBuilder->build();
+        },
         'Посетитель' => function () {
             $monkey = new Behavioral\Visitor\Monkey();
             $lion = new Behavioral\Visitor\Lion();
@@ -214,29 +244,6 @@ return [
 
             $dolphin->accept($speak);
             $dolphin->accept($jump);
-        },
-        'Стратегия' => function () {
-            $dataSet = [1, 5, 4, 3, 2, 8];
-
-            $sorter = new Behavioral\Strategy\Sorter(new Behavioral\Strategy\BubbleSortStrategy());
-            $sorter->sort($dataSet);
-
-            $sorter = new Behavioral\Strategy\Sorter(new Behavioral\Strategy\QuickSortStrategy());
-            $sorter->sort($dataSet);
-        },
-        'Состояние' => function () {
-            $editor = new Behavioral\State\TextEditor(new Behavioral\State\DefaultCase());
-
-            $editor->type('Обычный текст');
-
-            $editor->setState(new Behavioral\State\UpperCase());
-
-            $editor->type('Капс');
-            $editor->type('Капс-капс');
-
-            $editor->setState(new Behavioral\State\LowerCase());
-
-            $editor->type('Строчный текст');
         },
     ],
 ];
