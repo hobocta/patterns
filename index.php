@@ -11,7 +11,13 @@
 </head>
 <body>
     <div class="container">
-        <? require 'actions.php' ?>
+        <?php
+        $patternsTree = include 'patternsTree.php';
+
+        foreach ($patternsTree as $type => $patterns) {
+            include 'index_type.php';
+        }
+        ?>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
