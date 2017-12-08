@@ -224,5 +224,19 @@ return [
             $sorter = new Behavioral\Strategy\Sorter(new Behavioral\Strategy\QuickSortStrategy());
             $sorter->sort($dataSet);
         },
+        'Состояние' => function () {
+            $editor = new Behavioral\State\TextEditor(new Behavioral\State\DefaultCase());
+
+            $editor->type('Обычный текст');
+
+            $editor->setState(new Behavioral\State\UpperCase());
+
+            $editor->type('Капс');
+            $editor->type('Капс-капс');
+
+            $editor->setState(new Behavioral\State\LowerCase());
+
+            $editor->type('Строчный текст');
+        },
     ],
 ];
