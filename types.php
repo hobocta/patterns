@@ -114,7 +114,7 @@ return [
             }
         ))
         ->add(new Pattern(
-            'Декоратор',
+            'Декоратор (обёртка)',
             function () {
                 $coffee = new Structural\Decorator\Coffee();
                 echo $coffee->getCost() . PHP_EOL;
