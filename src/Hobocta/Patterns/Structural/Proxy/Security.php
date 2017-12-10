@@ -6,7 +6,7 @@ namespace Hobocta\Patterns\Structural\Proxy;
  * Class Security
  * @package Hobocta\Patterns\Structural\Proxy
  */
-class Security
+class Security implements Door
 {
     /**
      * @var Door
@@ -25,7 +25,7 @@ class Security
     /**
      * @param string $password
      */
-    public function open(string $password)
+    public function open(string $password = '')
     {
         if ($this->authenticate($password)) {
             $this->door->open();
