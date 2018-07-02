@@ -42,7 +42,7 @@ return [
             }
         ))
         ->add(new Pattern(
-            'Простая фабирка',
+            'Простая фабрика',
             function () {
                 $simpleFactory = Creational\SimpleFactory\DoorFactory::makeDoor(150, 200);
 
