@@ -32,8 +32,11 @@ class Pattern
 
     /**
      * Pattern constructor.
+     *
      * @param string $name
      * @param \Closure $closure
+     *
+     * @throws \ReflectionException
      */
     public function __construct(string $name, \Closure $closure)
     {
@@ -45,6 +48,7 @@ class Pattern
 
     /**
      * @return string
+     * @throws \ReflectionException
      */
     protected function getSource()
     {
