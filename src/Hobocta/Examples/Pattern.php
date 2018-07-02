@@ -65,7 +65,7 @@ class Pattern
 
         $source = array_map(
             function ($item) {
-                return preg_replace('/^\s{16}/', '', $item);
+                return preg_replace('/^\s{20}/', '', $item);
             },
             $source
         );
