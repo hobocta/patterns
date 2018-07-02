@@ -1,6 +1,6 @@
 <?php
-require_once 'vendor/autoload.php';
-require_once 'src/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/src/autoload.php';
 
 $loader = new Twig_Loader_Filesystem('./templates');
 $twig = new Twig_Environment($loader, array(
@@ -8,7 +8,11 @@ $twig = new Twig_Environment($loader, array(
 //    'debug' => true,
 ));
 
-$template = $twig->load('index.html.twig');
+try {
+    $template = $twig->load('index.html.twig');
+} catch (\Twig_Error $e) {
+    die(sprintf('Exception message: %s (%s:%s)', $e->getMessage(), $e->getFile(), $e->getLine()));
+}
 
 $types = include 'types.php';
 
