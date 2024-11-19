@@ -1,19 +1,24 @@
 <?php
+
 require_once __DIR__ . '/vendor/autoload.php';
 require_once __DIR__ . '/src/autoload.php';
 
-$loader = new Twig_Loader_Filesystem('./templates');
-$twig = new Twig_Environment($loader, array(
-    'cache' => './cache',
-//    'debug' => true,
-));
+use Twig\Environment;
+use Twig\Loader\FilesystemLoader;
 
 try {
+    $loader = new FilesystemLoader('./templates');
+
+    $twig = new Environment($loader, [
+        'cache' => './cache',
+        'debug' => true,
+    ]);
+
     $template = $twig->load('index.html.twig');
-} catch (\Twig_Error $e) {
+
+    echo $template->render([
+        'types' => include 'types.php',
+    ]);
+} catch (Exception $e) {
     die(sprintf('Exception message: %s (%s:%s)', $e->getMessage(), $e->getFile(), $e->getLine()));
 }
-
-$types = include 'types.php';
-
-echo $template->render(compact('types'));
