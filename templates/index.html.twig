@@ -1,7 +1,7 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-    <title>Паттерны проектирования</title>
+    <title>Design Patterns</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet"
@@ -12,9 +12,13 @@
 </head>
 <body>
 <div class="container">
-    {% for type in types %}
-        {% include 'type.html.twig' %}
-    {% endfor %}
+    {% if types is defined and types is not empty %}
+        {% for type in types %}
+            {% include 'type.html.twig' %}
+        {% endfor %}
+    {% else %}
+        <p>No available types.</p>
+    {% endif %}
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
